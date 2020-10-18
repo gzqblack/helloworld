@@ -1,0 +1,85 @@
+{
+  "id": "/nginx",
+  "backoffFactor": 1.15,
+  "backoffSeconds": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "192.168.0.141:5000/nginx:latest",
+      "forcePullImage": false,
+      "privileged": false,
+      "parameters": []
+    },
+    "volumes": [],
+    "portMappings": []
+  },
+  "cpus": 0.1,
+  "disk": 0,
+  "instances": 1,
+  "maxLaunchDelaySeconds": 300,
+  "mem": 128,
+  "gpus": 0,
+  "networks": [
+    {
+      "mode": "container/bridge"
+    }
+  ],
+  "requirePorts": false,
+  "upgradeStrategy": {
+    "maximumOverCapacity": 1,
+    "minimumHealthCapacity": 1
+  },
+  "killSelection": "YOUNGEST_FIRST",
+  "unreachableStrategy": {
+    "inactiveAfterSeconds": 0,
+    "expungeAfterSeconds": 0
+  },
+  "role": "slave_public",
+  "tasksStats": {
+    "startedAfterLastScaling": {
+      "stats": {
+        "counts": {
+          "staged": 0,
+          "running": 1,
+          "healthy": 0,
+          "unhealthy": 0
+        },
+        "lifeTime": {
+          "averageSeconds": 14.233,
+          "medianSeconds": 14.233
+        }
+      }
+    },
+    "withLatestConfig": {
+      "stats": {
+        "counts": {
+          "staged": 0,
+          "running": 1,
+          "healthy": 0,
+          "unhealthy": 0
+        },
+        "lifeTime": {
+          "averageSeconds": 14.233,
+          "medianSeconds": 14.233
+        }
+      }
+    },
+    "totalSummary": {
+      "stats": {
+        "counts": {
+          "staged": 0,
+          "running": 1,
+          "healthy": 0,
+          "unhealthy": 0
+        },
+        "lifeTime": {
+          "averageSeconds": 14.233,
+          "medianSeconds": 14.233
+        }
+      }
+    }
+  },
+  "healthChecks": [],
+  "fetch": [],
+  "constraints": []
+}
